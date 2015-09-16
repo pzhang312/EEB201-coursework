@@ -1,12 +1,12 @@
 {
-    "contents" : "r <- 0.90\nNN = 100\nttMAX = 10\npopu <- rep(NA, 11)\npopu[1] <- NN\nfor(tt in 1:ttMAX){\n  popu[tt + 1] = popu[tt] * r;\n  cat(\"The population size of year\", tt, popu[tt + 1], \"\\n\");\n}\nprint(popu)\nplot(0:10, popu, xlab = \"time\", ylab = \"size\", col = 'red')",
+    "contents" : "popu[tt + 1] = popu[tt] * (1 + r * (1-popu[tt]/KK)) #equation\n\n\nr <- 1.05\nNN = 100\nttMAX = 10\nKK = 1000\npopu <- rep(NA, 11)\npopu[1] <- NN\nfor(tt in 1:ttMAX){\n  popu[tt + 1] = popu[tt] * (1 + r * (1-popu[tt]/KK));\n  cat(\"The population size of year\", tt, popu[tt + 1], \"\\n\");\n}\nprint(popu)\nplot(0:10, popu, xlab = \"time\", ylab = \"size\", col = 'red')",
     "created" : 1442442893110.000,
     "dirty" : false,
     "encoding" : "UTF-8",
     "folds" : "",
-    "hash" : "3986018",
+    "hash" : "978841819",
     "id" : "EED5F63E",
-    "lastKnownWriteTime" : 1442442933,
+    "lastKnownWriteTime" : 1442443370,
     "path" : "~/GitHub/EEB201-coursework/discrete_logistic.R",
     "project_path" : "discrete_logistic.R",
     "properties" : {
