@@ -1,0 +1,17 @@
+{
+    "contents" : "library(ape)\nlibrary(geiger)\nlibrary(ggplot2)\n#trying in class exercise\ncat(\"hello world\")\ngetwd()\nsetwd(\"/Users/ZhangXinhui/GitHub/EEB201-coursework\")\ntips <- c(\"learn R\", \"avoid excel\")\nsource(\"/Users/ZhangXinhui/GitHub/EEB201-coursework/source.example.R\")\nsource(\"source.example.R\")\nall.I.know.about.life.I.learned.in.grad.school()\ntt <- read.tree(\"tree.tre\")\nstr(tt)\ntt$tip.label\nattributes(tt)\ntt$Nnode\ndd <- read.table(\"data.txt\", header = T, sep = '\\t', as.is=T)\ndd <- read.table(\"data.txt\", header=T, sep='\\t', as.is=T)\nattributes(dd)\ndim(dd)\ndim(dd)[2]\nsize <- runif(92)\nsize <- runif(dim(dd)[1])\nhead(cbind(dd,size))\nnewdd <- cbind(dd, size)\nhead(dd$species)\nnewdd[1,]\nwhich(dd$mode == \"MPF\")\ndd[which(dd$mode == \"MPF\"), ]\ndd[which(dd$mode == \"MPF\"), which(dd$species == \"Acanthurus_blochii\")]\nmpfs <- which(dd$mode == 'MPF')\nmpf_swimmers <- dd[mpfs,]\n\nfor (ii in 1:5){\n  cat(\"\\nthe number is \", ii)\n}\n\nnotfish <- c(\"bat\", \"dolphin\", \"toad\", \"soldier\")\nfor(a in notfish){\n  cat(a, \"fish \\n\", sep=\"\")\n}\nfor(a in notfish){\n  cat(a, \"fish\", \"1\\n\", sep=\"_\")\n}\nfor(a in notfish){\n  cat(a, \"fish\", \" are tasty!\\n\", sep=\"\")\n}\n\nxx <- 1\nwhile(xx < 5) {\n  xx <- xx+1; \n  cat(\"value of xx is\", xx, sep = \"_\", \"\\n\")\n}\nprint(xx)\n\nxx <- 1\nwhile(xx < 10) {\n  xx <- xx+1; \n  #cat(\"value of xx is \", xx, \".\", \"\\n\", sep = \"\")\n  if (xx == 7) {\n    cat(\"My lucky number is\", xx, \"\\n\")\n  }\n  else if (xx == 2){\n    cat(\"The number\", xx, \"is unlucky.\\n\")\n  }\n  else {\n    cat(\"not exited about the number\", xx, \"\\n\")\n  }\n}\nprint(xx)\n\n\n#Below are Sep.16 afternoon examples. \nxx <- 21\nif (xx < 2 | xx > 20){\n  print(xx)\n}\n\nnn <- 10\nRR <- 0.1\nfor (tt in 1:10){\n  nn[tt + 1] <- nn[tt]*RR\n}\nprint(nn)\n\n\n\n\n\nr <- 1.05\npopu <- rep(NA, 11)\npopu[1] <- 100\nfor(tt in 1:10){\n  popu[tt + 1] = popu[tt] * r;\n  cat(\"The population size of year\", tt, popu[tt + 1], \"\\n\");\n}\nprint(popu)\nplot(0:10, popu, xlab = \"time\", ylab = \"size\", col = 'blue')\n\nr <- 0.90\nNN = 100\nttMAX = 10\npopu <- rep(NA, 11)\npopu[1] <- NN\nfor(tt in 1:ttMAX){\n  popu[tt + 1] = popu[tt] * r;\n  cat(\"The population size of year\", tt, popu[tt + 1], \"\\n\");\n}\nprint(popu)\nplot(0:10, popu, xlab = \"time\", ylab = \"size\", col = 'red')\n\n\n#trying to make a function from the script above\ngeometricGrowthFun <- function(r, NN, ttMAX){\n  popu <- rep(NA, 11)\n  popu[1] <- NN\n  for(tt in 1:ttMAX){\n    popu[tt + 1] = popu[tt] * r;\n    cat(\"The population size of year\", tt, popu[tt + 1], \"\\n\");\n  }\n  print(popu)\n  plot(0:ttMAX, popu, xlab = \"time\", ylab = \"size\", col = 'red')\n}\n\n\n\n\n\n\n\n\n\n\n\n",
+    "created" : 1442422878307.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2522964056",
+    "id" : "2D1269D5",
+    "lastKnownWriteTime" : 1442442770,
+    "path" : "~/GitHub/EEB201-coursework/my_first_script.R",
+    "project_path" : "my_first_script.R",
+    "properties" : {
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "type" : "r_source"
+}
