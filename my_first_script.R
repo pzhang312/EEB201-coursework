@@ -70,9 +70,32 @@ while(xx < 10) {
 print(xx)
 
 
+#Below are Sep.16 afternoon examples. 
+xx <- 21
+if (xx < 2 | xx > 20){
+  print(xx)
+}
+
+nn <- 10
+RR <- 0.1
+for (tt in 1:10){
+  nn[tt + 1] <- nn[tt]*RR
+}
+print(nn)
 
 
 
+
+
+r <- 1.05
+popu <- rep(NA, 11)
+popu[1] <- 100
+for(tt in 1:10){
+  popu[tt + 1] = popu[tt] * r;
+  cat("The population size of year", tt, popu[tt + 1], "\n");
+}
+print(popu)
+plot(0:10, popu, xlab = "time", ylab = "size", col = 'blue')
 
 
 

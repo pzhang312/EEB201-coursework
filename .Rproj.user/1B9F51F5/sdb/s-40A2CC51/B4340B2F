@@ -1,0 +1,18 @@
+{
+    "contents" : "r <- 1.05\npopul <- matrix(NA, nrow = 11, ncol = 2)\npopul[1, 1] <- 0\npopul[1, 2] <- 100\nfor(tt in 1:10){\n  popul[tt + 1, 1] = tt + 1;\n  popul[tt + 1, 2] = popul[tt, 2] * r;\n}\nprint(popul)\nplot()",
+    "created" : 1442441995504.000,
+    "dirty" : true,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "4159200112",
+    "id" : "B4340B2F",
+    "lastKnownWriteTime" : 8243108395342047232,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "type" : "r_source"
+}
