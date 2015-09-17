@@ -122,8 +122,20 @@ geometricGrowthFun <- function(r, NN, ttMAX){
   plot(0:ttMAX, popu, xlab = "time", ylab = "size", col = 'red')
 }
 
+#Below are Sep.17 exaples
 
+library(deSolve)
 
+s1 <- rnorm(1000, mean = 0, sd = 1)
+s3 <- rnorm(1000, mean = 0, sd = 3)
+par(mfrow=c(1,1), mar=c(4, 4, 3, 2)) 
+plot(density(s1),col=2,lwd=4,xlab="Value",xlim=c(-15,15),main="Normal distribution")
+lines(density(s3),col=4,lwd=4) 
+legend(-15,0.35,c("sigma=1","sigma=3"),lwd=4,col=c(2,4),cex=1)
+abline(v = quantile(s1, 0.75), lty = 2, lwd = 3, col = 2)
+abline(v = quantile(s3, 0.75), lty = 2, lwd = 3, col = 4)
+quantile(s1, 0.75)
+quantile(s1)
 
 
 
