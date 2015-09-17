@@ -1,0 +1,18 @@
+{
+    "contents" : "#Exercise 1)\n\nfor(ii in 1:9){\n  if(ii != 9){\n    cat(\"\\n\")\n  }\n  if(ii == 9){\n    cat(\"*\")\n  }\n}\n\n\n\n\n\n\n\n\n\n\n#Exercise 4)\nyears <- c( 2015, 2016, 2018, 2020, 2021)\nfor(ii in 1:length(years)){\n  if(years[ii] %% 2 == 0){\n    cat(years[ii], 'Hooray, congressional elections!', sep = '\\t', fill = T)\n  }\n  if((years[ii]-1792) %% 4 == 0){\n    cat(years[ii], \" Hooray, presidential election!\\n\")\n  }\n  \n}",
+    "created" : 1442447713704.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3925193567",
+    "id" : "5F0CC1FD",
+    "lastKnownWriteTime" : 1442448051,
+    "path" : "~/GitHub/EEB201-coursework/Bootcamp Exercise 1.R",
+    "project_path" : "Bootcamp Exercise 1.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "type" : "r_source"
+}

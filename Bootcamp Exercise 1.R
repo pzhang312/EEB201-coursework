@@ -1,3 +1,23 @@
+#Exercise 1)
+
+for(ii in 1:9){
+  if(ii != 9){
+    cat("\n")
+  }
+  if(ii == 9){
+    cat("*")
+  }
+}
+
+
+
+
+
+
+
+
+
+
 #Exercise 4)
 years <- c( 2015, 2016, 2018, 2020, 2021)
 for(ii in 1:length(years)){
