@@ -137,9 +137,16 @@ abline(v = quantile(s3, 0.75), lty = 2, lwd = 3, col = 4)
 quantile(s1, 0.75)
 quantile(s1)
 
+par(mfrow = c(1, 1), mar = c(4, 4, 3, 2))
+boxplot(cbind(s1,s3),names=c("Sigma=1","Sigma=3"),main="Draws from a normal distribution",col=c(2,4))
 
-
-
+bins <- seq(-11, 11, by = 1)
+hist(s1, breaks = bins)$breaks
+hist(s3, breaks = bins)$breaks
+counts_s1 <- hist(s1, breaks = bins)$counts
+counts_s3 <- hist(s3, breaks = bins)$counts
+par(mfrow = c(1,1), mar = c(5, 5, 5, 5))
+barplot(rbind(counts_s1, counts_s3), col = c(2, 4),beside = T, names.arg = seq(-11, 10, by = 1), xlab = "Value", ylab = "Counts")
 
 
 
