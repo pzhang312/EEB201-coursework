@@ -1,0 +1,18 @@
+{
+    "contents" : "#Exercise 1)\n\nfor(ii in 1:9){\n  if(ii != 9){\n    cat(\"\\n\")\n  }\n  if(ii == 9){\n    cat(\"*\")\n  }\n}\n\n#Exercise 2)\n\nfor(ii in 1:19){\n  if(ii %% 2 == 0){\n    cat(\"&\")\n  }\n  if(ii %% 2 != 0){\n    cat(\"*\")\n  }\n}\n\n#Exercise 3)\n\ndogs(at the start) = 10\ndogs(at the end)= 15\nmeatloaf(at the start) = 0\nmeatloaf(at the end) = -30\nbubbles(at the start) = 12\nbubbles(at the end) = -4\n\n\n#Exercise 4)\n\nyears <- c( 2015, 2016, 2018, 2020, 2021)\nfor(ii in 1:length(years)){\n  if(years[ii] %% 2 == 0){\n    cat(years[ii], 'Hooray, congressional elections!', sep = '\\t', fill = T)\n  }\n  if((years[ii]-1792) %% 4 == 0){\n    cat(years[ii], \" Hooray, presidential election!\\n\")\n  }\n  \n}\n\n#Exercise 5)\n\nbankAccounts <- c(10, 9.2, 5.6, 3.7, 8.8, 0.5);\ninterestRate <- 0.0125;\ncompounded <- rep(NA, 6)\nfor (i in 1:length(bankAccounts)) {\n  compounded[i] <- interestRate*bankAccounts[i] + bankAccounts[i]; }\n\n#Exercise 6)\n\nbankAccounts <- c(10, 9.2, 5.6);\ninterestRate <- 0.0525;   \nhouse <- c(4.8, 3.8, 5.7); \nfood<- c(3.5, 4.3, 5.0);    \nfun <- c(7.8, 2.1, 10.5);  \nincome <- c(21, 21, 21); \n\nfor (j in 1:5) {\n  for (i in 1:length(bankAccounts)) {\n    bankAccounts[i] = bankAccounts[i] - house[i] - food[i] - fun[i] + income[i] \n    bankAccounts[i] = bankAccounts[i]*interestRate + bankAccounts[i] \n  }\n}\nprint(bankAccounts)\n\n#Exercise 7)\n\n\nbankAccounts <- c(10, 9.2, 5.6);\ninterestRate <- 0.0525;   \nhouse <- c(4.8, 3.8, 5.7); \nfood<- c(3.5, 4.3, 5.0);    \nfun <- c(7.8, 2.1, 10.5);  \nincome <- c(21, 21, 21); \n\nfor (j in 2015:2020) {\n  if ((j - 2014) %% 2 == 0){\n    for (i in 1:length(bankAccounts)) {\n      bankAccounts[i] = bankAccounts[i] - house[i] - food[i] - fun[i] + income[i] \n      bankAccounts[i] = bankAccounts[i]*interestRate + bankAccounts[i] \n      cat(\"In the year of\", j, \"student\", i, \"will have a compound of\", bankAccounts[i], \".\\n\");\n    }\n  }\n  if ((j - 2014) %% 2 != 0) {\n    for (i in 1:length(bankAccounts)){\n      if (i == 2){\n        bankAccounts[i] = bankAccounts[i] - house[i] - food[i] - fun[i] + income[i] \n        bankAccounts[i] = bankAccounts[i]*interestRate + bankAccounts[i]\n      }\n      if (i != 2){\n        bankAccounts[i] = bankAccounts[i] - house[i] - food[i] - fun[i] + income[i] + 5; \n        bankAccounts[i] = bankAccounts[i]*interestRate + bankAccounts[i]\n      }\n      cat(\"In the year of\", j, \"student\", i, \"will have a compound of\", bankAccounts[i], \".\\n\");\n    }\n  }\n}\n\n#Exercise 8)\nxx <- 1\nsum = 0\nwhile(xx < 18){\n  sum = sum + xx;\n  xx = xx + 1;\n}\nprint(sum)\n\n#Exercise 9)\ninput = -100\nif(input <= -1){\n  print(\"small\")\n}\nif(input >= 1){\n  print(\"big\")\n}\nif(input >= -1 & input <= 1){\n  print(\"medium\")\n}\n\n\n\n\n\n\n",
+    "created" : 1443043625919.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "4241072183",
+    "id" : "4099BEF0",
+    "lastKnownWriteTime" : 1443043884,
+    "path" : "~/GitHub/EEB201-coursework/Bootcamp Exercise 1.R",
+    "project_path" : "Bootcamp Exercise 1.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "type" : "r_source"
+}
