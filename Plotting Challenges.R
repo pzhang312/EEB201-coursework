@@ -116,17 +116,18 @@ abline(v = threshold_low)
 case_genotypes <- snpsDataFrame["rs7584086_T", cases]
 
 #2.f
+
 control_genotypes <- snpsDataFrame["rs7584086_T", controls]
 
 #2.g
-sum(case_genotypes == 0)
-sum(case_genotypes == 1)
-sum(case_genotypes == 2)
+
+controls_matrix <- as.matrix(control_genotypes)
+table(controls_matrix)
 
 #2.h
-sum(case_genotypes == 0)
-sum(case_genotypes == 1)
-sum(case_genotypes == 2)
+
+case_matrix <- as.matrix(case_genotypes)
+table(case_matrix)
 
 
 
