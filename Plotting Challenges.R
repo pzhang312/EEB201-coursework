@@ -91,17 +91,42 @@ yy <- seq(0, 4, by = 0.01)
 lines(xx, yy, lty = 2, col = 3, lwd = 4)
 
 
+#2.a
+zz <- read.table("pheno.sim.2014-1.txt", header = TRUE)
 
+#2.b
 
+glucose <- zz[, 2]
+threshold_low <- quantile(glucose, 0.25)
+controls <- which(zz[, 2] < threshold_low)
 
+#2.c
+glucose <- zz[, 2]
+threshold_high <- quantile(glucose, 0.75)
+cases <- which(zz[, 2] > threshold_high)
 
+#2.d
+dd <- density(glucose)
+plot(dd)
+abline(v = threshold_high)
+abline(v = threshold_low)
 
+#2.e
 
+case_genotypes <- snpsDataFrame["rs7584086_T", cases]
 
+#2.f
+control_genotypes <- snpsDataFrame["rs7584086_T", controls]
 
+#2.g
+sum(case_genotypes == 0)
+sum(case_genotypes == 1)
+sum(case_genotypes == 2)
 
-
-
+#2.h
+sum(case_genotypes == 0)
+sum(case_genotypes == 1)
+sum(case_genotypes == 2)
 
 
 
